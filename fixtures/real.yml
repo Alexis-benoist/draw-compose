@@ -1,0 +1,42 @@
+db:
+  image: postgres
+  env_file:
+  - .env
+rabbit:
+  image: rabbitmq
+  env_file:
+  - .env
+app:
+  image: axabt/afds
+  command: gunicorn manage:app -b 0.0.0.0:8000
+  env_file:
+  - .env
+  volumes:
+  - ./data:/afds/data
+  links:
+  - db
+  - rabbit
+worker:
+  image: axabt/afds
+  command: su normal_user -c "celery -A web.tasks worker"
+  env_file:
+  - .env
+  links:
+  - rabbit
+  - db
+web:
+  image: nginx:latest
+  volumes:
+    - ./ops/config.nginx:/etc/nginx/nginx.conf
+    - ./web/static:/static
+  ports:
+    - "80:80"
+  links:
+    - app
+cron:
+  image: axabt/afds
+  command: python manage.py run_cron
+  links:
+  - db
+  env_file:
+  - .env

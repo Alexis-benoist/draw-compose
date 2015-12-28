@@ -1,15 +1,28 @@
 # Draw compose
 
-Test to see to render compose files. This project needs graphviz installed.
+Render compose files with one command line!
 
-# Simple example
+This project needs graphviz installed.
 
-![Simple example](https://raw.githubusercontent.com/Alexis-benoist/draw-compose/master/simple.png?raw=true "Simple Example")
+## Simple example
 
-# Classic python example
-![Python classic](https://raw.githubusercontent.com/Alexis-benoist/draw-compose/master/web_app.png?raw=true "Python web app")
+![Simple example](https://raw.githubusercontent.com/Alexis-benoist/draw-compose/master/fixtures/simple.png?raw=true "Simple Example")
+
+## Classic python example
+![Python classic](https://raw.githubusercontent.com/Alexis-benoist/draw-compose/master/fixtures/web_app.png?raw=true "Python web app")
+
+# Install
+## On OSX:
+Install graphviz `brew install graphviz` and draw-compose:
+
+    $ pip install draw-compose
+
 # Use
 
-    $ pip install -r requirements.txt
-    $ python draw.py
-    $ open test.pdf # on OSX
+Renders by default `docker-compose.yml` in the current folder.
+
+    $ draw-compose -o docker.png
+
+Or a specific docker file can be rendered:
+
+    $ draw-compose -i  -o docker-specific.png
