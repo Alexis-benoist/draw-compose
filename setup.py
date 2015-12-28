@@ -10,7 +10,7 @@ except IOError:
 setup(
     name='draw-compose',
 
-    version='0.0.1',
+    version='0.0.3',
 
     description='Render Docker compose files',
     long_description=long_description,
