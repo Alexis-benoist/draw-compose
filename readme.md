@@ -25,4 +25,4 @@ Renders by default `docker-compose.yml` in the current folder.
 
 Or a specific docker file can be rendered:
 
-    $ draw-compose -i  -o docker-specific.png
+    $ draw-compose -i fixtures/real.yml -o docker-specific.png
