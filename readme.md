@@ -27,6 +27,7 @@ Or a specific docker file can be rendered:
 
     $ draw-compose -i fixtures/real.yml -o docker-specific.png
 
+# Notes
 Released under an Apache License 2.0
 
 Creator: Alexis Benoist @Alexis_Benoist
