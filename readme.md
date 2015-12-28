@@ -9,7 +9,7 @@ This project needs graphviz installed.
 ![Simple example](https://raw.githubusercontent.com/Alexis-benoist/draw-compose/master/fixtures/simple.png?raw=true "Simple Example")
 
 ## Classic python example
-![Python classic](https://raw.githubusercontent.com/Alexis-benoist/draw-compose/master/fixtures/web_app.png?raw=true "Python web app")
+![Python classic](https://raw.githubusercontent.com/Alexis-benoist/draw-compose/master/fixtures/real.png?raw=true "Python web app")
 
 # Install
 ## On OSX:
