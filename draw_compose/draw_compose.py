@@ -5,7 +5,9 @@ template = \
  digraph {{
     graph [rankdir=LR];
     node [label="\N",
-        shape=box
+        shape=box,
+        style=filled,
+        color=".7 .3 1.0"
     ];
     edge [color=gray50,
 	arrowhead=normal,
