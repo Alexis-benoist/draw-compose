@@ -30,6 +30,8 @@ Or a specific docker file can be rendered:
 # Notes
 Released under an Apache License 2.0
 
+Similar: [docker-compose-graphviz](https://github.com/abesto/docker-compose-graphviz) written in GoLang
+
 Creator: Alexis Benoist @Alexis_Benoist
 
 Inspired by [ERAlchemy](https://github.com/Alexis-benoist/ERAlchemy)
