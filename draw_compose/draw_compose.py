@@ -84,10 +84,17 @@ def dot_to_graph(dot, output_path):
     graph.draw(path=output_path, prog='dot')
 
 
+def write_dot_file(dot, dot_file):
+    if dot_file:
+        with open(dot_file, 'w') as f:
+            f.write(dot)
+
+
 def get_parser():
     parser = argparse.ArgumentParser()
     parser.add_argument('-i', '--input', help='Path of the docker-compose yml.', default='docker-compose.yml')
     parser.add_argument('-o', '--output', help='Path of the result image.')
+    parser.add_argument('-d', '--dot-file', help='Path to write dot file (optional)')
     return parser
 
 
@@ -95,6 +102,7 @@ def cli():
     parser = get_parser()
     args = parser.parse_args()
     dot = format_dot(args.input)
+    write_dot_file(dot, args.dot_file)
     dot_to_graph(dot, args.output)
 
 if __name__ == '__main__':
