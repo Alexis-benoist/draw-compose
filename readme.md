@@ -30,7 +30,9 @@ Or a specific docker file can be rendered:
 # Notes
 Released under an Apache License 2.0
 
-Similar: [docker-compose-graphviz](https://github.com/abesto/docker-compose-graphviz) written in GoLang
+Similar:
+ - [docker-compose-graphviz](https://github.com/abesto/docker-compose-graphviz) written in GoLang
+ - [compose-plantuml](https://github.com/funkwerk/compose_plantuml) written in Python
 
 Creator: Alexis Benoist @Alexis_Benoist
 
